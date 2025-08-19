@@ -10,4 +10,9 @@ class LastFmService
         private LastFmApi $lastFmApi
     ) {
     }
+
+    public function initLastFmConnection()
+    {
+
+    }
 }

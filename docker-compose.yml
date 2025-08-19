@@ -1,0 +1,25 @@
+services:
+  music-app-client:
+    image: music-app-client:${TAG:-latest}
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./client/src:/app/src
+    depends_on:
+      - music-app-server
+
+  music-app-server:
+    image: music-app-server:${TAG:-latest}
+    restart: unless-stopped
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./server/.env
+    volumes:
+      - ./server:/app
