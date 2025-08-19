@@ -11,7 +11,10 @@ A PHP backend / Angular frontend application to lookup and pull data related to 
 
 ## How To Use (Docker):
 
-- Check out the following repository: https://github.com/alex-dulac/docker-music-app
+- Install Docker
+- Copy the `.env.example` file in the server directory and populate your own details.
+  - `cd server && cp .env.example .env && cd ..`
+- In the project root, run `docker compose up` (use -d to run in background)
 
 ## How To Use (non-Docker):
 

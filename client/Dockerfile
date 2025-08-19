@@ -12,6 +12,6 @@ RUN npm run build
 
 RUN npm install -g http-server
 
-EXPOSE 5173
+EXPOSE 4200
 
-CMD ["http-server", "dist/frontend", "-p", "5173"]
+CMD ["http-server", "dist/frontend", "-p", "4200"]
