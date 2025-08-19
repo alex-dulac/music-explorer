@@ -11,7 +11,7 @@ import { ReleaseGroupDetailsModel } from "@modules/release/models/release-group-
 })
 export class ApiService {
 
-    baseUrl: string = 'https://api.music.app.test/api';
+    baseUrl: string = 'http://0.0.0.0:8000/api';
 
     constructor(
         private http: HttpClient
