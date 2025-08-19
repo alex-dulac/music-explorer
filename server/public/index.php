@@ -47,7 +47,7 @@ require __DIR__.'/../vendor/autoload.php';
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
 \Sentry\init([
-    'dsn' => 'https://4bd5693fe8cb4b85e467f61e57821881@o4506649967525888.ingest.sentry.io/4506649969491968',
+    'dsn' => getenv('SENTRY_DSN'),
     // Specify a fixed sample rate
     'traces_sample_rate' => 1.0,
     // Set a sampling rate for profiling - this is relative to traces_sample_rate
