@@ -13,6 +13,6 @@ class LastFmService
 
     public function initLastFmConnection()
     {
-        // this happens after the client stores a token and username... i think
+
     }
 }
